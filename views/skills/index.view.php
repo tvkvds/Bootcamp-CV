@@ -2,7 +2,7 @@
 
 <div class="main">
     <?php var_dump($vars['skills'])?>
-
+<!--
     <?php foreach ($vars['skills'] as $skill) : ?>
         <ul>
             <li><?= $skill->skill?></li>
@@ -14,6 +14,7 @@
           
         </ul>
     <?php endforeach ;?>
+            -->
 </div>
 
 <?php require 'views/partials/footer.view.php' ?>

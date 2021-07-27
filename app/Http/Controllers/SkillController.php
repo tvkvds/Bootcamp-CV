@@ -19,14 +19,14 @@ class SkillController extends Controller
         ]);
     }
 
-    public function user()
-    {
-        #hardcoded atm
-        View::render('skills/user.view', [
-            'skills' => [
-            ['skill' => 'HTML', 'description' => '', 'category' => 'Development', 'in_progress' => '0'],
-            ['skill' => 'JS', 'description' => '', 'category' => 'Development', 'in_progress' => '0'],
-            ['skill' => 'PHP', 'description' => '', 'category' => 'Development', 'in_progress' => '1']]
+    public function user($user_id = null)
+    {   
+        $user_id = 2;
+        
+        $skillModel = new SkillModel();
+        
+        View::render('skills/show.view', [
+           'skills' => $skillModel::getAllFromUser($user_id),
             ]);
     }
 }

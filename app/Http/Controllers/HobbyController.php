@@ -23,7 +23,7 @@ class HobbyController extends Controller
     {
         
         #hardcoded atm
-        View::render('hobbies/user.view', ['hobbies'=>[
+        View::render('hobbies/show.view', ['hobbies'=>[
             ['hobbie' => 'Cooking', 'description' => 'Love trying all kinds of new recipes.'],
             ['hobbie' => 'Medieval festivals', 'description' => 'Love the music, atmosphere, as visitor as well as volunteer']
         ]]);

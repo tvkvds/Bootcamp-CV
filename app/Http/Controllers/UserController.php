@@ -22,7 +22,7 @@ class UserController extends Controller
     {
         
         #hardcoded atm
-        View::render('users/user.view', ['users' => 
+        View::render('users/show.view', ['users' => 
         ['first_name' => 'Tamara',
          'last_name' => 'van Klinken', 
          'tagline' => ':)',

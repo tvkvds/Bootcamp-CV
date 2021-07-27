@@ -23,7 +23,7 @@ class ProjectController extends Controller
     {
         $projectsModel = new ProjectModel();
 
-        View::render('projects/user.view', [
+        View::render('projects/show.view', [
             'projects' => $projectsModel::all(),
             
         ]);
