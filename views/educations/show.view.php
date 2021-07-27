@@ -1,14 +1,18 @@
 <?php require 'views/partials/header.view.php' ?>
 
 <div class="main">
-<div>
-<?php $educations = $vars['educations']; ?>
-  <ul>
-  <?php foreach ($educations as $education) : ?>
-    <li><?=$education['education'] . ' at ' .$education['institution'] . ' started ' . $education['started'];?></li>
-    <?php endforeach; ?>
-  </ul>
-</div>
+
+<h3>Educations</h3>
+
+    <?php foreach ($vars['educations'] as $education) : ?>
+        <ul>
+            <li><?= $education->education;?></li>
+            <li><?= $education->institution;?></li>
+            <li><?= $education->started;?></li>
+            <li><?= $education->finished;?></li>
+        </ul>
+    <?php endforeach ;?>
+
 </div>
 
 <?php require 'views/partials/footer.view.php' ?>

@@ -73,6 +73,7 @@ class Model
         if ($id === 0) return null;
 
         $fields = "*";
+        $selectedFields = [];
 
         if (count($selectedFields) > 0) {
             $fields = self::composeQuery($selectedFields);
