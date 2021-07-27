@@ -11,6 +11,7 @@
             <li><?= $skill->category?></li>
             <?= ($skill->description) ? "<li>" . $skill->description . "</li>" : null; ?>
          </ul>
+         <br>
     <?php endforeach ;?>
 
 </div>

@@ -11,7 +11,7 @@ class HobbyController extends Controller
 {
     public function index()
     {
-        $hobbyModel = new hobbyModel();
+        $hobbyModel = new HobbyModel();
 
         View::render('hobbies/index.view', [
             'hobbies' => $hobbyModel::all(),
@@ -19,13 +19,14 @@ class HobbyController extends Controller
         ]);
     }
 
-    public function user()
-    {
+    public function user($user_id = null)
+    {   
+        $user_id = 2;
         
-        #hardcoded atm
-        View::render('hobbies/show.view', ['hobbies'=>[
-            ['hobbie' => 'Cooking', 'description' => 'Love trying all kinds of new recipes.'],
-            ['hobbie' => 'Medieval festivals', 'description' => 'Love the music, atmosphere, as visitor as well as volunteer']
-        ]]);
+        $hobbyModel = new HobbyModel();
+        
+        View::render('hobbies/show.view', [
+           'hobbies' => $hobbyModel::getAllFromUser($user_id),
+            ]);
     }
 }

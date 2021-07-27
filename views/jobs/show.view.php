@@ -1,11 +1,18 @@
 <?php require 'views/partials/header.view.php' ?>
 
-<!--
-['function' => '', 'company' => '', 'responsibilities' => '', 'started' => '','ended' => ''],
--->     
-
 <div class="main">
   
-<?php var_dump($vars);?>
+<h3>Jobs</h3>
+
+    <?php foreach ($vars['jobs'] as $job) : ?>
+        <ul>
+            <li><?= $job->function;?></li>
+            <li><?= $job->company;?></li>
+            <li><?= $job->responsibilities;?></li>
+            <li><?= $job->started;?></li>
+            <li><?= $job->ended;?></li>
+        </ul>
+        <br>
+    <?php endforeach ;?>
 
 <?php require 'views/partials/footer.view.php' ?>

@@ -11,6 +11,7 @@
             <li><?= $education->started;?></li>
             <li><?= $education->finished;?></li>
         </ul>
+        <br>
     <?php endforeach ;?>
 
 </div>
