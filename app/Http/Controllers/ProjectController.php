@@ -11,21 +11,22 @@ class ProjectController extends Controller
 {
     public function index()
     {
-        $projectsModel = new ProjectModel();
+        $projectModel = new ProjectModel();
 
         View::render('projects/index.view', [
-            'projects' => $projectsModel::all(),
+            'projects' => $projectModel::all(),
             
         ]);
     }
 
-    public function user()
-    {
-        $projectsModel = new ProjectModel();
-
+    public function user($user_id = null)
+    {   
+        $user_id = 2;
+        
+        $projectModel = new ProjectModel();
+        
         View::render('projects/show.view', [
-            'projects' => $projectsModel::all(),
-            
-        ]);
+           'projects' => $projectModel::getAllFromUser($user_id),
+            ]);
     }
 }

@@ -1,20 +1,18 @@
 <?php require 'views/partials/header.view.php' ?>
 
 <div class="main">
-    <?php var_dump($vars['skills'])?>
-<!--
+
+    <h3>Skills</h3>
+    
     <?php foreach ($vars['skills'] as $skill) : ?>
         <ul>
+            <?= ($skill->in_progress) ? "<li>learning</li>" : null; ?>
             <li><?= $skill->skill?></li>
-            <li><?= $skill->description?></li>
             <li><?= $skill->category?></li>
-            <?php if ($skill->in_progress === '1'): ?>
-            <li>learning</li>
-            <?php endif; ?>
-          
-        </ul>
+            <?= ($skill->description) ? "<li>" . $skill->description . "</li>" : null; ?>
+         </ul>
     <?php endforeach ;?>
-            -->
+        
 </div>
 
 <?php require 'views/partials/footer.view.php' ?>

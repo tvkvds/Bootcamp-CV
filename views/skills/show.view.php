@@ -1,20 +1,18 @@
 <?php require 'views/partials/header.view.php' ?>
-
-<!--
-            ['skill' => 'HTML', 'description' => '', 'category' => 'Development', 'in_progress' => '0'],
--->     
-
+ 
 <div class="main">
 
+  <h3>Skills</h3>
 
-  
-<div>
-<?php $skills = $vars->skills; ?>
-  <ul>
-  <?php foreach ($skills as $skill) : ?>
-    <li><?= 'Skill: ' . $skill['skill'] . ' - ' . $skill['category'] . ' - ' . $skill['in_progress'];?></li>
-    <?php endforeach; ?>
-  </ul>
+  <?php foreach ($vars['skills'] as $skill) : ?>
+        <ul>
+            <?= ($skill->in_progress) ? "<li>learning</li>" : null; ?>
+            <li><?= $skill->skill?></li>
+            <li><?= $skill->category?></li>
+            <?= ($skill->description) ? "<li>" . $skill->description . "</li>" : null; ?>
+         </ul>
+    <?php endforeach ;?>
+
 </div>
 
 <?php require 'views/partials/footer.view.php' ?>
