@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-class ProjectModel extends Model
+class ApplicantModel extends Model
 {
     // Name of the table
-    protected $model = "projects";
+    protected $model = "applicants";
 
     // Max number of records when fetching all records from table
     protected $limit;

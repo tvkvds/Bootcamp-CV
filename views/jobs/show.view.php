@@ -1,7 +1,7 @@
 <?php require 'views/partials/header.view.php' ?>
 
 <div class="main">
-
+  
 <h3>Jobs</h3>
 
     <?php foreach ($vars['jobs'] as $job) : ?>

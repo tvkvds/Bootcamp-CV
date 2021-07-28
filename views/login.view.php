@@ -6,7 +6,8 @@
                 <div><h3>Guitar(t)ists</h3></div>
             </span>
         </div>
-
+        
+        <!--write function that does actual logging in at onsubmit-->
         <form method="POST" name="frmLogin" onsubmit="return false;">
             <div class="mb-3">
                 <label for="email" class="form-label">Your email address</label>

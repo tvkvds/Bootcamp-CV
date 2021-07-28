@@ -1,10 +1,10 @@
 <?php require 'views/partials/header.view.php' ?>
-
+ 
 <div class="main">
 
-    <h3>Skills</h3>
-    
-    <?php foreach ($vars['skills'] as $skill) : ?>
+  <h3>Skills</h3>
+
+  <?php foreach ($vars['skills'] as $skill) : ?>
         <ul>
             <?= ($skill->in_progress) ? "<li>learning</li>" : null; ?>
             <li><?= $skill->skill?></li>
@@ -13,7 +13,7 @@
          </ul>
          <br>
     <?php endforeach ;?>
-        
+
 </div>
 
 <?php require 'views/partials/footer.view.php' ?>

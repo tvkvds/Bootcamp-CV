@@ -19,13 +19,14 @@ class JobController extends Controller
         ]);
     }
 
-    public function user()
-    {
+    public function user($user_id = null)
+    {   
+        $user_id = 2;
         
-        #hardcoded atm
-        View::render('jobs/user.view', ['jobs'=>[
-            ['function' => 'Webmaster - content manager', 'company' => 'zzp', 'responsibilities' => 'Developing and maintaining a wordpress site and creating digital products with related content.', 'started' => '2011', 'ended' => '2019'],
-            ['function' => 'JS and digital content aid', 'company' => 'volunteering', 'responsibilities' => 'Advising on and creating a digital content strategy, fixing/editing JS code', 'started' => '2017', 'ended' => '']
-        ]]);
+        $jobModel = new JobModel();
+        
+        View::render('jobs/show.view', [
+           'jobs' => $jobModel::getAllFromUser($user_id),
+            ]);
     }
 }
