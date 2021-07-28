@@ -27,7 +27,7 @@ class UserController extends Controller
         $userModel = new UserModel();
         
         View::render('users/show.view', [
-           'users' => $userModel::getAllFromUser($user_id),
+           'users' => $userModel::getAllFromId($user_id)
             ]);
     }
     

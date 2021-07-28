@@ -19,14 +19,14 @@ class ApplicantController extends Controller
         ]);
     }
 
-    public function user($user_id = null)
+    public function user($id = null)
     {   
-        $user_id = 2;
+        $id = 2;
         
         $applicantModel = new ApplicantModel();
         
         View::render('applicants/show.view', [
-           'applicants' => $applicantModel::getAllFromUser($user_id),
+           'applicants' => $applicantModel::getAllFrom('id',$id),
             ]);
     }
 }
