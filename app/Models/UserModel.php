@@ -5,10 +5,6 @@ namespace App\Models;
 class UserModel extends Model
 {
 
-    public $first_name;
-    public $last_name;
-    public $tagline;
-
     // Name of the table
     protected $model = "users";
 

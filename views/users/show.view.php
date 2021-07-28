@@ -1,20 +1,28 @@
 <?php require 'views/partials/header.view.php' ?>
 
 <div class="main">
-  <?php $user = $vars['users']; ?>
+  <?php var_dump($vars); ?>
+  <h3>User</h3>
+
+  <?php foreach ($vars['users'] as $user) : ?>
+        <ul>
+            
+            <li><?= $user->first_name;?></li>
+            <li><?= $user->last_name;?></li>
+            <li><?= $user->tagline;?></li>
+            <li><?= $user->github;?></li>
+            <li><?= $user->linkedin;?></li>
+            <li><?= $user->region;?></li>
+            <li><?= $user->introduction;?></li>
+            <li><?= $user->background;?></li>
+            <li><?= $user->birthyear;?></li>
+            
+            
+         </ul>
+         <br>
+    <?php endforeach ;?>
+
 <div>
-  <h3><?= $user['first_name'] . ' ' . $user['last_name'];?></h3>
-  <span><?= $user['tagline'];?></span>
-  <br>
-  <a href="<?= $user['github']; ?>"><i class="fab fa-github"></i></a>
-  <a href="<?= $user['linkedin']; ?>"><i class="fa-brands fa-linkedin"></i></a>
-  <a href="<?= $user['email']; ?>"><i class="fa-solid fa-envelope"></i></a>
-  <br>
-  <li><?= $user['region'];?></li>
-  <li><?= $user['birthyear'];?></li>
-  <li><?= $user['introduction'];?></li>
-  <li><?= $user['background'];?></li>
-</div>
-</div>
+ 
 
 <?php require 'views/partials/footer.view.php' ?>
