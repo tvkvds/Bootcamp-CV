@@ -4,6 +4,8 @@
       <ul>
          <li><a href="../users">users</a></li>
          <li><a href="../users/show">show user</a></li>
+         <li><a href="../applicants">applicants</a></li>
+         <li><a href="../applicants/show">show applicant</a></li>
          <li><a href="../educations">educations</a></li>
          <li><a href="../educations/show">show educations user</a></li>
          <li><a href="../jobs">jobs</a></li>

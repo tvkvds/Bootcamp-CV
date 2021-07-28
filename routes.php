@@ -28,3 +28,8 @@ $router->get('hobbies/show', 'App/Http/Controllers/HobbyController.php@user');
 
 $router->get('projects', 'App/Http/Controllers/ProjectController.php@index');
 $router->get('projects/show', 'App/Http/Controllers/ProjectController.php@user');
+
+$router->get('applicants', 'App/Http/Controllers/ApplicantController.php@index');
+$router->get('applicants/show', 'App/Http/Controllers/ApplicantController.php@user');
+
+
