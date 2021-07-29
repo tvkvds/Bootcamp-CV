@@ -8,9 +8,9 @@
      <h1 class="px-3">Hi there, I'm <?= $user->first_name?></h1>
     </div>
    <div class="d-flex justify-content-end p-2">
-     <a href="<?=$user->github?>" class="px-1">Github</a>
-     <a href="<?=$user->linkedin?>" class="px-1">Linkedin</a>
-     <a href="<?=$user->email?>" class="px-1">Mail</a>
+     <a href="<?=$user->github?>" class="px-1"><i class="fab fa-github fa-3x p-1"></i></a>
+     <a href="<?=$user->linkedin?>" class="px-1"><i class="fab fa-linkedin fa-3x p-1"></i></a>
+     <a href="<?=$user->email?>" class="px-1"><i class="fas fa-envelope-square fa-3x p-1"></i></a>
     </div>
    <div class="container p-3 px-5">
       <p><b><?= $user->introduction;?></b></p>
