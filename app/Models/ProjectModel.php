@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Exception;
+
 class ProjectModel extends Model
 {
     // Name of the table
@@ -19,5 +21,18 @@ class ProjectModel extends Model
     public function __construct()
     {
         parent::__construct($this->model);
+    }
+
+    public static function userProjects($user_id)
+    {
+        try 
+        {
+            $projectModel = new ProjectModel();
+            return $projectModel::getAllFromUser($user_id);
+        }
+        catch(Exception $e) 
+        {
+            return "No projects where found: " . $e;
+        }
     }
 }

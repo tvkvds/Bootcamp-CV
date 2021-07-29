@@ -6,7 +6,6 @@ $middleware = new CheckLogin;
 
 $router->get('', 'App/Http/Controllers/HomeController.php@index');
 
-
 $router->get('users', 'App/Http/Controllers/UserController.php@index');
 $router->get('users/show', 'App/Http/Controllers/UserController.php@user');
 
