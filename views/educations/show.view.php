@@ -2,7 +2,7 @@
 
 <div class="main">
 
-<h3>Educations</h3>
+    <h3>Educations</h3>
 
     <?php foreach ($vars['educations'] as $education) : ?>
         <ul>
@@ -10,7 +10,7 @@
             <li><?= $education->institution;?></li>
             <li><?= $education->started;?></li>
             <li><?= $education->finished;?></li>
-        </ul>
+         </ul>
         <br>
     <?php endforeach ;?>
 

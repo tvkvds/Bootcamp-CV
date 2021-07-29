@@ -1,8 +1,8 @@
 <?php require 'views/partials/header.view.php' ?>
 
 <div class="main">
-  
-<h3>Jobs</h3>
+
+    <h3>Jobs</h3>
 
     <?php foreach ($vars['jobs'] as $job) : ?>
         <ul>
@@ -14,5 +14,7 @@
         </ul>
         <br>
     <?php endforeach ;?>
+    
+</div>
 
 <?php require 'views/partials/footer.view.php' ?>

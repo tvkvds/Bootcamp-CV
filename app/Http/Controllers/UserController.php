@@ -39,8 +39,7 @@ class UserController extends Controller
            'skills' => SkillModel::userSkills($user_id),
            'projects' => ProjectModel::userProjects($user_id),
            'educations' => EducationModel::userEducations($user_id),
-
-            ]);
+        ]);
 
     }
     

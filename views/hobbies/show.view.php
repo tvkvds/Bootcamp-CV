@@ -5,8 +5,8 @@
   <h3>Hobbies</h3>
 
   <?php foreach ($vars['hobbies'] as $hobby) : ?>
-    <ul>
-      <li><?= $hobby->hobby?></li>
+   <ul>
+     <li><?= $hobby->hobby?></li>
       <li><?= $hobby->description?></li>
     </ul>
     <br>
