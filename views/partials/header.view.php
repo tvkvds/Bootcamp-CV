@@ -1,24 +1,9 @@
 <header>
-   <h2><a href="../">Project CV</a></h3>
-   <nav>
-      <ul>
-         <li><a href="../users">users</a></li>
-         <li><a href="../users/show">show user</a></li>
-         <li><a href="../applicants">applicants</a></li>
-         <li><a href="../applicants/show">show applicant</a></li>
-         <li><a href="../educations">educations</a></li>
-         <li><a href="../educations/show">show educations user</a></li>
-         <li><a href="../jobs">jobs</a></li>
-         <li><a href="../jobs/show">show jobs user</a></li>
-         <li><a href="../skills">skills</a></li>
-         <li><a href="../skills/show">show skills user</a></li>
-         <li><a href="../hobbies">hobbies</a></li>
-         <li><a href="../hobbies/show">show hobbies user</a></li>
-         <li><a href="../projects">projects</a></li>
-         <li><a href="../projects/show">show projects user</a></li>  
-      </ul>
-   </nav>
+   <nav class="navbar navbar-light bg-light ">
+      <div class="container-fluid d-flex justify-content-center">
+         <a class="navbar-brand" href="../">Project CV</a>
+         <a class="nav-link" href="../users">users</a>
+         <a href="../users/show">user</a>
+      </div>
+   </nav> 
 </header>
-<br>
-<hr>
-<br>

@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Exception;
+
 class SkillModel extends Model
 {
     // Name of the table
@@ -19,5 +21,19 @@ class SkillModel extends Model
     public function __construct()
     {
         parent::__construct($this->model);
+    }
+
+    
+    public static function userSkills($user_id)
+    {
+        try 
+        {
+            $skillModel = new SkillModel();
+            return $skillModel::getAllFromUser($user_id);
+        }
+        catch(Exception $e) 
+        {
+            return "No skills where found: " . $e;
+        }
     }
 }

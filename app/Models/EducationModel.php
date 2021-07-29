@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Exception;
+
 class EducationModel extends Model
 {
     // Name of the table
@@ -19,5 +21,18 @@ class EducationModel extends Model
     public function __construct()
     {
         parent::__construct($this->model);
+    }
+    
+    public static function userEducations($user_id)
+    {
+        try 
+        {
+            $educationsModel = new EducationModel();
+            return $educationsModel::getAllFromUser($user_id);
+        }
+        catch(Exception $e) 
+        {
+            return "No educations where found: " . $e;
+        }
     }
 }

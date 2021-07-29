@@ -6,9 +6,7 @@ $middleware = new CheckLogin;
 
 $router->get('', 'App/Http/Controllers/HomeController.php@index');
 
-if ($middleware->isLoggedIn) {
-    $router->get('users', 'App/Http/Controllers/UserController.php@index');
-}
+$router->get('users', 'App/Http/Controllers/UserController.php@index');
 $router->get('users/show', 'App/Http/Controllers/UserController.php@user');
 
 $router->get('login', 'App/Http/Controllers/LoginController.php');
@@ -29,7 +27,7 @@ $router->get('hobbies/show', 'App/Http/Controllers/HobbyController.php@user');
 $router->get('projects', 'App/Http/Controllers/ProjectController.php@index');
 $router->get('projects/show', 'App/Http/Controllers/ProjectController.php@user');
 
-$router->get('applicants', 'App/Http/Controllers/ApplicantController.php@index');
-$router->get('applicants/show', 'App/Http/Controllers/ApplicantController.php@user');
+
+
 
 
