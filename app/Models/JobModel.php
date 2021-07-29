@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models;
+use Exception;
 
 class JobModel extends Model
 {
@@ -21,8 +22,16 @@ class JobModel extends Model
         parent::__construct($this->model);
     }
 
-    public function userJobs()
+    public static function userJobs($user_id)
     {
-
+        try 
+        {
+            $jobModel = new JobModel();
+            return $jobModel::getAllFromUser($user_id);
+        }
+        catch(Exception $e) 
+        {
+            return "No jobs where found: " . $e;
+        }
     }
 }

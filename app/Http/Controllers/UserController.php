@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\UserModel;
+use App\Models\JobModel;
+use App\Models\HobbyModel;
 use App\Libraries\View;
 use App\Libraries\MySql;
 
@@ -20,15 +22,18 @@ class UserController extends Controller
     }
     
         
-        public function user($user_id = null)
+    public function user($user_id = null)
     {   
         $user_id = 2;
         
         $userModel = new UserModel();
         
         View::render('users/show.view', [
-           'users' => $userModel::getAllFromId($user_id)
+           'users' => $userModel::getAllFromId($user_id),
+           'jobs' => JobModel::userJobs($user_id),
+           'hobbies' => HobbyModel::userHobbies($user_id)
             ]);
+
     }
     
 
@@ -42,7 +47,7 @@ class UserController extends Controller
 
     public function create()
     {
-        
+        dd('create user');
     }
 
     /**
