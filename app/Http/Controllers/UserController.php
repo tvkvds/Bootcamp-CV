@@ -28,7 +28,7 @@ class UserController extends Controller
         
     public function user($user_id = null)
     {   
-        $user_id = 2;
+        $user_id = 4;
         
         $userModel = new UserModel();
         
